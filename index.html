@@ -211,6 +211,141 @@
   .tips h2 { color: #8b6f00; margin-bottom: 12px; font-size: 1.2rem; }
   .tips ul { margin-left: 22px; font-size: 0.93rem; color: #5a4a00; }
   .tips li { margin-bottom: 6px; }
+
+  /* Grab guide */
+  .grab-guide {
+    background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+    border: 2px solid #34d399;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 30px;
+  }
+  .grab-guide h2 {
+    color: #065f46;
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #34d399;
+    padding-bottom: 8px;
+  }
+  .grab-intro {
+    font-size: 0.93rem;
+    color: #14532d;
+    background: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    border-left: 4px solid #10b981;
+    margin-bottom: 20px;
+  }
+  .grab-h3 {
+    color: #065f46;
+    font-size: 1.05rem;
+    margin: 22px 0 10px;
+    padding-left: 8px;
+    border-left: 4px solid #10b981;
+  }
+  .grab-list {
+    margin-left: 24px;
+    font-size: 0.92rem;
+    color: #1f3a2e;
+    line-height: 1.8;
+  }
+  .grab-list li { margin-bottom: 6px; }
+  .grab-list small { color: #4b5e54; }
+  .grab-route {
+    background: white;
+    padding: 14px 18px;
+    border-radius: 8px;
+    border: 1px dashed #34d399;
+    margin-top: 6px;
+  }
+  .grab-warning {
+    background: #fff7ed;
+    border-left: 4px solid #f59e0b;
+    padding: 10px 14px;
+    margin-top: 12px;
+    font-size: 0.87rem;
+    color: #92400e;
+    border-radius: 4px;
+  }
+  .fare-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px 0;
+    font-size: 0.9rem;
+  }
+  .fare-table th, .fare-table td {
+    padding: 10px 14px;
+    text-align: center;
+    border: 1px solid #d1fae5;
+  }
+  .fare-table thead th {
+    background: #10b981;
+    color: white;
+    font-weight: 600;
+  }
+  .fare-table tbody td:first-child {
+    background: #d1fae5;
+    color: #065f46;
+    font-weight: 600;
+  }
+  .grab-note {
+    font-size: 0.86rem;
+    color: #4b5e54;
+    margin: 8px 0 14px;
+  }
+  .scam-cards {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin: 12px 0;
+  }
+  .scam-card {
+    background: white;
+    border: 1px solid #fecaca;
+    border-left: 4px solid #ef4444;
+    border-radius: 6px;
+    padding: 12px 14px;
+    font-size: 0.88rem;
+  }
+  .scam-card strong { color: #991b1b; display: block; margin-bottom: 4px; }
+  .scam-card p { color: #4b5563; line-height: 1.55; }
+  .taxi-cards {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin: 10px 0;
+  }
+  .taxi-card {
+    background: white;
+    border-radius: 8px;
+    padding: 14px 18px;
+    border: 2px solid;
+    font-size: 0.9rem;
+  }
+  .taxi-card.vinasun { border-color: #10b981; }
+  .taxi-card.mailinh { border-color: #059669; }
+  .taxi-card strong {
+    display: block;
+    color: #065f46;
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+  .taxi-card p { color: #1f3a2e; margin: 2px 0; }
+  .grab-sources {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px dashed #34d399;
+    font-size: 0.82rem;
+    color: #4b5e54;
+  }
+  .grab-sources a {
+    color: #065f46;
+    text-decoration: none;
+  }
+  .grab-sources a:hover { text-decoration: underline; }
   footer {
     text-align: center;
     padding: 30px 20px;
@@ -740,6 +875,116 @@
   <div style="background:#fff; border-radius:8px; padding:14px 18px; margin-top:18px; border-left:4px solid var(--accent); font-size:0.88rem;">
     <strong>⏰ タイムバッファのコツ</strong><br>
     日曜は渋滞が比較的少ないですが、空港の国際線チェックイン締切は通常出発の60分前。<strong>21:00空港着なら逆算してホテル発19:30が安全ライン</strong>です。雨季（5〜10月）はスコールで渋滞することもあるため、雨季旅行なら30分早め出発を推奨。
+  </div>
+</div>
+
+<!-- ================== GRAB GUIDE ================== -->
+<div class="grab-guide">
+  <h2>🚖 Grab使い方＆空港ぼったくり完全対策</h2>
+  <p class="grab-intro">深夜21:55着で女性旅行者にとって最初の関門が「空港から市内への移動」。タンソンニャット空港はタクシーぼったくりが多発しているため、<strong>Grab（配車アプリ）の事前準備が必須</strong>です。</p>
+
+  <h3 class="grab-h3">📲 STEP 1：日本でGrab事前準備（出発前）</h3>
+  <ol class="grab-list">
+    <li><strong>App Store / Google Playで「Grab」をDL</strong>（無料）</li>
+    <li>電話番号（日本の番号でOK）でSMS認証してアカウント作成</li>
+    <li>メニュー → Payment → <strong>クレジットカード登録</strong>（VISA/Mastercard推奨。現金支払も可能だが深夜は不向き）</li>
+    <li>名前・メールアドレスを登録（領収書がメール送付される）</li>
+    <li>※ 日本国内ではGrab配車できないが、アカウント作成・カード登録は事前に可能。現地到着後すぐ使える状態にしておく</li>
+  </ol>
+
+  <h3 class="grab-h3">📡 STEP 2：空港到着後すぐやること</h3>
+  <ol class="grab-list">
+    <li><strong>SIM/eSIM起動 or 空港Wi-Fi接続</strong>（Grabはネット必須）<br>
+      <small>👉 eSIM（Airalo, Saily等）を日本で事前購入し、機内で起動するのが最速・最安全</small></li>
+    <li>位置情報をON</li>
+    <li>Grabアプリを起動 → 出発地が「Tan Son Nhat Airport」になっていることを確認</li>
+  </ol>
+
+  <h3 class="grab-h3">🗺 STEP 3：国際線ターミナル → Grab乗り場の動線</h3>
+  <div class="grab-route">
+    <ol class="grab-list">
+      <li>入国審査・荷物受取後、<strong>到着出口（Arrival Gate）から外に出る</strong></li>
+      <li>外に出たら<strong>客引き全員を無視</strong>（「Taxi?」「Grab?」と声かけられても応じない）</li>
+      <li><strong>「The Lucky Cafe &amp; Fastfood」の看板方向へ直進</strong>（建物に沿って右手方向）</li>
+      <li>カフェを通り過ぎ、<strong>駐車場エリアの手前がGrab指定ピックアップ場所</strong></li>
+      <li>アプリで配車 → ドライバー到着待ち（深夜は5〜10分程度）</li>
+    </ol>
+    <p class="grab-warning">⚠ 2024〜2025年に乗り場が複数回変更されています。<strong>アプリ配車後に表示されるピックアップ地点（A1, A2など）を必ず確認</strong>。係員に「Where is my Grab?」と聞けば誘導してくれます。</p>
+  </div>
+
+  <h3 class="grab-h3">📱 STEP 4：アプリの操作（配車手順）</h3>
+  <ol class="grab-list">
+    <li>ホーム画面で <strong>「Car」</strong>（または「Transport」）をタップ</li>
+    <li>「Where to?」に行き先を入力（ホテル名を英語で。例：<em>Park Hyatt Saigon</em>）</li>
+    <li>車種を選択：
+      <ul style="margin:6px 0 6px 20px; font-size:0.9rem;">
+        <li><strong>GrabCar（4人乗り）</strong>：標準・最安。1区まで約20〜30万VND</li>
+        <li><strong>GrabCar Plus / 7-seater</strong>：荷物多い・複数人向け</li>
+      </ul>
+    </li>
+    <li>支払方法を確認（事前登録のクレカ or 現金）→ <strong>「Book」</strong></li>
+    <li>ドライバー名・車種・ナンバープレート・顔写真がアプリに表示される</li>
+    <li>到着した車のナンバープレートと<strong>アプリ表示が完全一致するか確認してから乗車</strong></li>
+    <li>乗車前に「<em>Hi, are you [ドライバー名]?</em>」と聞いて確認も◎</li>
+  </ol>
+
+  <h3 class="grab-h3">💴 料金の目安（市内中心部 1区まで）</h3>
+  <table class="fare-table">
+    <thead>
+      <tr><th>時間帯</th><th>GrabCar 通常</th><th>正規メータータクシー</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>昼間</td><td>15〜22万 VND</td><td>17〜22万 VND</td></tr>
+      <tr><td>夜間（21時以降）</td><td>20〜30万 VND<br><small>（深夜割増）</small></td><td>18〜25万 VND<br><small>+空港使用料 9,000 VND</small></td></tr>
+    </tbody>
+  </table>
+  <p class="grab-note">※ <strong>30万VND（約1,800円）を大きく超えたら要警戒</strong>。50万VND提示は完全にぼったくり。</p>
+
+  <h3 class="grab-h3">🚫 ぼったくり手口5選</h3>
+  <div class="scam-cards">
+    <div class="scam-card">
+      <strong>① 偽タクシー会社</strong>
+      <p>「Vinasun」「Mai Linh」に似せた偽社名（Vina Taxi, Ma Linhなど）。正規社名のスペルを覚えておく。</p>
+    </div>
+    <div class="scam-card">
+      <strong>② 「Grabは空港で使えない」詐欺</strong>
+      <p>出口で声をかけ自分の車に誘導する常套句。<strong>これは嘘</strong>。Grabは空港で正規利用可能。</p>
+    </div>
+    <div class="scam-card">
+      <strong>③ メーター不使用 / 改造メーター</strong>
+      <p>乗車後メーターを起動しない／回転が異常に速い。即降車を要求。</p>
+    </div>
+    <div class="scam-card">
+      <strong>④ 遠回りルート</strong>
+      <p>Google Mapで自分でルートを確認しながら乗車。Grabならアプリにルート表示される。</p>
+    </div>
+    <div class="scam-card">
+      <strong>⑤ 大札でお釣り持ち逃げ</strong>
+      <p>50万VND札で支払うと「お釣りない」と言われる。<strong>10万・20万VND札を事前準備</strong>。</p>
+    </div>
+  </div>
+
+  <h3 class="grab-h3">🛟 Grabが使えない時のバックアップ：正規タクシー2社</h3>
+  <div class="taxi-cards">
+    <div class="taxi-card vinasun">
+      <strong>Vinasun（ビナサン）</strong>
+      <p>白×緑、赤いライン入り</p>
+      <p>📞 +84-28-3827-2727</p>
+    </div>
+    <div class="taxi-card mailinh">
+      <strong>Mai Linh（マイリン）</strong>
+      <p>緑単色 or 白×緑</p>
+      <p>📞 +84-28-3838-3838</p>
+    </div>
+  </div>
+  <p class="grab-note">空港 <strong>左手の正規タクシースタンド</strong> から乗車。建物外で声をかける客引きは無視。ドライバーの顔写真とダッシュボードIDが一致するか確認。</p>
+
+  <div class="grab-sources">
+    <strong>出典：</strong>
+    <a href="https://nishivietnam.com/booking-grab-tan-son-nhat/" target="_blank" rel="noopener">月曜日のバインミー（Grab乗車方法）</a> ／
+    <a href="https://www.grab.com/global/airport-rides/tan-son-nhat-international-airport/" target="_blank" rel="noopener">Grab公式（タンソンニャット）</a> ／
+    <a href="https://www.arukikata.co.jp/areainfo/vn-sgn-access/" target="_blank" rel="noopener">地球の歩き方 2026年版</a> ／
+    <a href="https://dondonvietnam.com/hochiminh-airport-city/" target="_blank" rel="noopener">どんどん！ベトナム情報局</a>
   </div>
 </div>
 
