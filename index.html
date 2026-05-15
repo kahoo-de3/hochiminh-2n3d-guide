@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ホーチミン 2泊3日 女子旅ガイド｜安全＆人気スポット厳選15選</title>
+<meta name="description" content="ベトナム・ホーチミン2泊3日の女性向け旅行ガイド。日本人女性に評価が高く治安の良い宿泊先・観光地・グルメスポットを各5つ厳選紹介。">
+<style>
+  :root {
+    --primary: #d63384;
+    --primary-dark: #a02466;
+    --accent: #ffc107;
+    --bg: #fff8fb;
+    --card: #ffffff;
+    --text: #2d2d2d;
+    --muted: #666;
+    --border: #f3d7e3;
+    --safe-green: #2e8b57;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  header {
+    background: linear-gradient(135deg, #ff8fab 0%, #d63384 50%, #a02466 100%);
+    color: white;
+    padding: 60px 20px 80px;
+    text-align: center;
+    position: relative;
+  }
+  header::after {
+    content: "";
+    position: absolute;
+    bottom: -1px; left: 0; right: 0; height: 40px;
+    background: var(--bg);
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 60%);
+  }
+  header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  header .subtitle {
+    font-size: 1.05rem;
+    opacity: 0.95;
+    margin-bottom: 18px;
+  }
+  header .meta {
+    display: inline-flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+  header .meta span {
+    background: rgba(255,255,255,0.2);
+    padding: 6px 14px;
+    border-radius: 20px;
+    backdrop-filter: blur(6px);
+  }
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+  }
+  .intro {
+    background: var(--card);
+    border-left: 5px solid var(--primary);
+    padding: 22px 26px;
+    border-radius: 6px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 12px rgba(214,51,132,0.07);
+  }
+  .intro h2 {
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  .intro p { color: var(--muted); font-size: 0.95rem; }
+  .intro ul { margin: 10px 0 0 20px; font-size: 0.92rem; color: var(--muted); }
+  section { margin-bottom: 50px; }
+  section h2.section-title {
+    font-size: 1.7rem;
+    color: var(--primary-dark);
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 10px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  section h2.section-title .icon {
+    background: var(--primary);
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+  .cards { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    transition: transform .2s, box-shadow .2s;
+    display: flex; flex-direction: column;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(214,51,132,0.12);
+  }
+  .card-header {
+    display: flex; justify-content: space-between;
+    align-items: flex-start; gap: 10px; margin-bottom: 8px;
+  }
+  .card h3 {
+    color: var(--primary-dark);
+    font-size: 1.15rem;
+    line-height: 1.35;
+  }
+  .rank {
+    background: var(--accent);
+    color: #5d4500;
+    font-weight: 700;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+  .price {
+    color: var(--primary);
+    font-weight: 700;
+    margin: 10px 0 8px;
+    font-size: 0.98rem;
+  }
+  .price .label { color: var(--muted); font-weight: 400; font-size: 0.85rem; }
+  .area {
+    display: inline-block;
+    background: #fde8f1;
+    color: var(--primary-dark);
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+  .safety {
+    display: inline-block;
+    background: #e6f4ec;
+    color: var(--safe-green);
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+    margin-left: 4px;
+  }
+  .desc { font-size: 0.92rem; color: #444; margin: 8px 0 14px; flex-grow: 1; }
+  .source {
+    border-top: 1px dashed var(--border);
+    padding-top: 10px;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  .source a {
+    color: var(--primary);
+    text-decoration: none;
+    word-break: break-all;
+  }
+  .source a:hover { text-decoration: underline; }
+  .source-label { font-weight: 600; color: #555; }
+  .itinerary {
+    background: linear-gradient(135deg, #fff5f9 0%, #fff8fb 100%);
+    border-radius: 10px;
+    padding: 26px;
+    border: 1px solid var(--border);
+    margin-bottom: 50px;
+  }
+  .itinerary h2 {
+    color: var(--primary-dark);
+    margin-bottom: 18px;
+    font-size: 1.3rem;
+  }
+  .day { margin-bottom: 18px; }
+  .day h3 {
+    color: var(--primary);
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+  }
+  .day ul { margin-left: 22px; font-size: 0.93rem; color: #444; }
+  .tips {
+    background: #fffbea;
+    border: 1px solid #f6d77c;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 30px;
+  }
+  .tips h2 { color: #8b6f00; margin-bottom: 12px; font-size: 1.2rem; }
+  .tips ul { margin-left: 22px; font-size: 0.93rem; color: #5a4a00; }
+  .tips li { margin-bottom: 6px; }
+  footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border);
+  }
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.5rem; }
+    header .subtitle { font-size: 0.92rem; }
+    section h2.section-title { font-size: 1.3rem; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>ホーチミン 2泊3日 女子旅ガイド</h1>
+  <p class="subtitle">日本人女性に人気＆治安のよいスポットを厳選</p>
+  <div class="meta">
+    <span>🗓 2泊3日</span>
+    <span>✈ 利用空港：タンソンニャット国際空港 (SGN)</span>
+    <span>👜 女性ひとり・友達旅向け</span>
+  </div>
+</header>
+
+<main>
+
+<div class="intro">
+  <h2>本ガイドのコンセプト</h2>
+  <p>ベトナム・ホーチミン2泊3日の女性旅行者向けに、<strong>「日本人女性に評価が高い」「治安が良いエリアにある」</strong> の2軸で宿泊・観光・グルメを各5つずつ厳選しました。</p>
+  <ul>
+    <li>主に <strong>1区（ドンコイ通り・レタントン通り周辺）</strong>＝「リトル東京」と呼ばれ日本人駐在員も多く、夜間も比較的安心して歩けるエリアを中心に紹介</li>
+    <li>避けるべきエリア：<strong>ファングーラオ／ブイビエン通り（夜間のバックパッカー街）</strong></li>
+    <li>価格表記は2026年5月時点の目安（1 USD ≒ 約25,000 VND）</li>
+  </ul>
+</div>
+
+<!-- ================== HOTELS ================== -->
+<section>
+  <h2 class="section-title"><span class="icon">🏨</span>宿泊先 5選（女性に安心の1区中心）</h2>
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Park Hyatt Saigon（パーク ハイアット サイゴン）</h3>
+        <span class="rank">1</span>
+      </div>
+      <div>
+        <span class="area">📍 1区 オペラハウス前</span>
+        <span class="safety">治安◎</span>
+      </div>
+      <p class="desc">ホーチミンを代表する最高級5つ星。コロニアル様式の優雅な建物とホスピタリティで、日本人女性のリピーターが圧倒的に多い定番ホテル。スパ「Xuan Spa」も人気。</p>
+      <p class="price">💰 約 45,000〜80,000円／泊<span class="label">（1室・朝食付目安）</span></p>
+      <div class="source">
+        <span class="source-label">引用元：</span>
+        <a href="https://www.hyatt.com/park-hyatt/ja-JP/sgnph-park-hyatt-saigon" target="_blank" rel="noopener">Park Hyatt Saigon 公式</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Hotel Nikko Saigon（ホテル ニッコー サイゴン）</h3>
+        <span class="rank">2</span>
+      </div>
+      <div>
+        <span class="area">📍 1区 ベンタイン市場近く</span>
+        <span class="safety">日本語OK</span>
+      </div>
+      <p class="desc">日系ホテル。日本語スタッフ常駐、和朝食あり、館内は清潔そのもので、初めての海外旅行や女性ひとり旅の安心感が抜群。日本人女性レビュー評価が非常に高い。</p>
+      <p class="price">💰 約 18,000〜30,000円／泊</p>
+      <div class="source">
+        <span class="source-label">引用元：</span>
+        <a href="https://www.hotelnikkosaigon.com.vn/ja/" target="_blank" rel="noopener">Hotel Nikko Saigon 公式（日本語）</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Rex Hotel Saigon（レックス ホテル サイゴン）</h3>
+        <span class="rank">3</span>
+      </div>
+      <div>
+        <span class="area">📍 1区 ドンコイ通り</span>
+        <span class="safety">治安◎</span>
+      </div>
+      <p class="desc">1930年開業の歴史ある5つ星。屋上ルーフトップバーが有名で、サイゴンの夜景を一望できる女子旅映えスポット。観光すべてが徒歩圏。</p>
+      <p class="price">💰 約 18,000〜35,000円／泊（125 USD〜）</p>
+      <div class="source">
+        <span class="source-label">引用元：</span>
+        <a href="https://www.jtb.co.jp/ovs_htl/detail/search_detail/1909/" target="_blank" rel="noopener">JTB - Rex Hotel 詳細</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Hotel Continental Saigon</h3>
+        <span class="rank">4</span>
+      </div>
+      <div>
+        <span class="area">📍 1区 ドンコイ通り／オペラハウス隣</span>
+        <span class="safety">治安◎</span>
+      </div>
+      <p class="desc">1880年創業、ホーチミン最古の名門ホテル。フランス植民地時代の優雅さが残る中庭が美しく、レトロ好きの女性にぴったり。</p>
+      <p class="price">💰 約 15,000〜25,000円／泊</p>
+      <div class="source">
+        <span class="source-label">引用元：</span>
+        <a href="https://www.continentalsaigon.com/" target="_blank" rel="noopener">Hotel Continental Saigon 公式</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Liberty Central Saigon Centre</h3>
+        <span class="rank">5</span>
+      </div>
+      <div>
+        <span class="area">📍 1区 レタントン通り</span>
+        <span class="safety">リトル東京</span>
+      </div>
+      <p class="desc">日本人街「レタントン通り」沿いで、夜遅くても周囲に日本食店があり安心。ルーフトッププール付きで価格と立地のバランスが◎。</p>
+      <p class="price">💰 約 10,000〜18,000円／泊</p>
+      <div class="source">
+        <span class="source-label">引用元：</span>
+        <a href="https://www.libertycentralsaigoncentre.com/" target="_blank" rel="noopener">Liberty Central 公式</a> ／
+        <a href="https://note.com/sumikiki/n/n33f1b7552eea" target="_blank" rel="noopener">在住者解説（治安エリア）</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================== SIGHTS ================== -->
+<section>
+  <h2 class="section-title"><span class="icon">📸</span>観光スポット 5選（写真映え＆安全）</h2>
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-header">
+        <h3>サイゴン中央郵便局</h3>
+        <span class="rank">1</span>
+      </div>
+      <div>
+        <span class="area">📍 1区 サイゴン大教会隣</span>
+        <span class="safety">治安◎</span>
+      </div>
+      <p class="desc">エッフェル設計と伝わる、フランス植民地時代の代表建築。黄色い外壁と高い天井のアーチが圧巻で、女子旅写真の定番。お土産にベトナム雑貨も購入可。</p>
+      <p class="price">💰 入場無料</p>
+      <div class="source">
+        <span class="source-label">引用元：</span>
+        <a href="https://www.hankyu-travel.com/guide/vietnam/hochiminh.php" target="_blank" rel="noopener">阪急交通社 ホーチミン観光ガイド</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>タンディン教会（ピンクの教会）</h3>
+        <span class="rank">2</span>
+      </div>
+      <div>
+        <span class="area">📍 3区（1区から車10分）</span>
+        <span class="safety">治安◎</span>
+      </div>
+      <p class="desc">SNSで大人気「世界のピンクスポット」に選ばれた可愛らしいパステルピンクの教会。日本人女性のインスタ撮影スポット No.1。</p>
+      <p class="price">💰 入場無料（外観撮影）</p>
+      <div class="source">
+        <span class="source-label">引用元：</span>
+        <a href="https://www.knt.co.jp/travelguide/kaigai/021/" target="_blank" rel="noopener">近畿日本ツーリスト ホーチミン人気観光14選</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>統一会堂（旧大統領官邸）</h3>
+        <span class="rank">3</span>
+      </div>
+      <div>
+        <span class="area">📍 1区</span>
+        <span class="safety">治安◎</span>
+      </div>
+      <p class="desc">ベトナム戦争終結の象徴。日本語パンフレット無料配布、日本語オーディオガイドも有。1〜2時間で見学でき歴史好きの女性にも好評。</p>
+      <p class="price">💰 入場料 30,000 VND（約180円）</p>
+      <div class="source">
+        <span class="source-label">引用元：</span>
+        <a href="https://www.tour.ne.jp/w_review/SGN/sightseeing/spot/111218/" target="_blank" rel="noopener">トラベルコ 統一会堂 口コミ</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>ドンコイ通り＆オペラハウス周辺</h3>
+        <span class="rank">4</span>
+      </div>
+      <div>
+        <span class="area">📍 1区中心</span>
+        <span class="safety">治安◎</span>
+      </div>
+      <p class="desc">ハイブランドからベトナム雑貨まで揃うホーチミン随一の目抜き通り。カフェ・スパも徒歩圏で女子旅の拠点になる。夜もにぎわっていて比較的安全。</p>
+      <p class="price">💰 散策無料</p>
+      <div class="source">
+        <span class="source-label">引用元：</span>
+        <a href="https://www.chouchoutrip.com/entry/hochiminh-joshitabi-modelcourse" target="_blank" rel="noopener">しゅしゅ旅日記 ホーチミン女子旅モデルコース</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>サイゴン・スカイデッキ（Bitexco Tower 49F）</h3>
+        <span class="rank">5</span>
+      </div>
+      <div>
+        <span class="area">📍 1区</span>
+        <span class="safety">屋内・治安◎</span>
+      </div>
+      <p class="desc">地上262mの360度展望デッキ。サイゴン川の夕景がロマンチックで女子旅のラストにおすすめ。屋内なので天候・治安を気にせず安心。</p>
+      <p class="price">💰 入場料 約 240,000 VND（約1,400円）</p>
+      <div class="source">
+        <span class="source-label">引用元：</span>
+        <a href="https://www.knt.co.jp/travelguide/kaigai/021/" target="_blank" rel="noopener">近畿日本ツーリスト ホーチミン人気観光14選</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================== GOURMET ================== -->
+<section>
+  <h2 class="section-title"><span class="icon">🍜</span>グルメスポット 5選（映え＆ヘルシー）</h2>
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Cuc Gach Quan（クック・ガック・クアン）</h3>
+        <span class="rank">1</span>
+      </div>
+      <div>
+        <span class="area">📍 1区 古民家リノベ</span>
+        <span class="safety">女子人気No.1</span>
+      </div>
+      <p class="desc">古民家を改装した隠れ家ベトナム家庭料理。オバマ元大統領夫妻も来店。野菜中心のヘルシーな土鍋料理が女性に人気。要予約。</p>
+      <p class="price">💰 1人 250,000〜400,000 VND（約1,500〜2,400円）</p>
+      <div class="source">
+        <span class="source-label">引用元：</span>
+        <a href="https://www.hcm-cityguide.com/c/restaurants/s/vietnamese-cuisine/p/cuc-gach-quan" target="_blank" rel="noopener">ホーチミン観光情報ガイド</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Propaganda Saigon</h3>
+        <span class="rank">2</span>
+      </div>
+      <div>
+        <span class="area">📍 1区 サイゴン大教会前</span>
+        <span class="safety">映え◎</span>
+      </div>
+      <p class="desc">ポップアートな壁画が映えるベトナム創作料理カフェ。生春巻きとフォーをおしゃれな空間で食べられる、女子旅ランチの王道。</p>
+      <p class="price">💰 1人 200,000〜350,000 VND（約1,200〜2,100円）</p>
+      <div class="source">
+        <span class="source-label">引用元：</span>
+        <a href="https://www.veltra.com/jp/yokka/article/hochiminh-restaurant/" target="_blank" rel="noopener">VELTRA 元CA厳選ホーチミン名店8選</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Pho 2000（フォー 2000）</h3>
+        <span class="rank">3</span>
+      </div>
+      <div>
+        <span class="area">📍 1区 ベンタイン市場前</span>
+        <span class="safety">治安◎</span>
+      </div>
+      <p class="desc">「大統領のフォー」として有名な老舗フォー店。屋台より清潔感があり、女性ひとりでも入りやすい店内。あっさり優しいスープが日本人好み。</p>
+      <p class="price">💰 1杯 75,000〜100,000 VND（約450〜600円）</p>
+      <div class="source">
+        <span class="source-label">引用元：</span>
+        <a href="https://www.funliday.com/posts/hochiminh-city-meal/" target="_blank" rel="noopener">Funliday ホーチミン必食グルメ21選</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Quan Bui Original（クアン・ブイ）</h3>
+        <span class="rank">4</span>
+      </div>
+      <div>
+        <span class="area">📍 1区 レタントン通り近く</span>
+        <span class="safety">日本人街</span>
+      </div>
+      <p class="desc">レタントン通りの近くにある人気ベトナム料理店。英語・写真メニュー完備で言葉の壁なし。ナチュラルな雰囲気とクオリティで日本人女性の評価が高い。</p>
+      <p class="price">💰 1人 200,000〜350,000 VND（約1,200〜2,100円）</p>
+      <div class="source">
+        <span class="source-label">引用元：</span>
+        <a href="https://wkvetter.com/?page_id=2174" target="_blank" rel="noopener">Vetter（在住日本人向けメディア）</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>The Workshop Coffee（ザ ワークショップ）</h3>
+        <span class="rank">5</span>
+      </div>
+      <div>
+        <span class="area">📍 1区 ドンコイ通り近く</span>
+        <span class="safety">治安◎</span>
+      </div>
+      <p class="desc">高い天井とインダストリアル空間が映える人気スペシャルティコーヒー店。ベトナム産豆を使ったコーヒーとケーキで朝食やカフェタイムに最適。</p>
+      <p class="price">💰 1杯 75,000〜120,000 VND（約450〜720円）</p>
+      <div class="source">
+        <span class="source-label">引用元：</span>
+        <a href="https://note.com/nguyen_rona/n/n21e57e2f9fac" target="_blank" rel="noopener">グエン・ロナ note（女子旅モデルコース）</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================== ITINERARY ================== -->
+<div class="itinerary">
+  <h2>🗓 おすすめ 2泊3日 モデルプラン</h2>
+  <div class="day">
+    <h3>Day 1：到着＆1区中心を散策</h3>
+    <ul>
+      <li>SGN空港着 → Grabでホテルへ（30〜45分／約25万VND）</li>
+      <li>ドンコイ通り＆オペラハウス周辺を散策</li>
+      <li>夜：Cuc Gach Quan でベトナム家庭料理（要予約）</li>
+    </ul>
+  </div>
+  <div class="day">
+    <h3>Day 2：定番観光＆映えスポット巡り</h3>
+    <ul>
+      <li>朝：Pho 2000 で朝フォー</li>
+      <li>午前：サイゴン中央郵便局＋サイゴン大教会＋統一会堂</li>
+      <li>午後：タンディン教会で写真撮影 → スパでリフレッシュ</li>
+      <li>夜：サイゴン・スカイデッキで夜景 → Rex Hotel ルーフトップバー</li>
+    </ul>
+  </div>
+  <div class="day">
+    <h3>Day 3：ショッピング＆出発</h3>
+    <ul>
+      <li>朝：The Workshop Coffee でベトナムコーヒー</li>
+      <li>ベンタイン市場でお土産（バッチャン焼き・ドライフルーツ等）</li>
+      <li>ランチ：Propaganda Saigon</li>
+      <li>夕方：Grabで空港へ</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ================== TIPS ================== -->
+<div class="tips">
+  <h2>⚠️ 女性のための安全Tips</h2>
+  <ul>
+    <li><strong>移動は配車アプリ「Grab」を必ず使用</strong>。流しのタクシーぼったくり回避に必須</li>
+    <li><strong>夜のファングーラオ／ブイビエン通り（バックパッカー街）は避ける</strong></li>
+    <li>ショルダーバッグは斜めがけ・歩道側に。バイクひったくりが最多被害</li>
+    <li>スマホを手に持って歩道を歩かない（バイクから奪われやすい）</li>
+    <li>露出の高い服装は避ける（教会訪問時は肩・膝を覆う）</li>
+    <li>大金や高価なアクセサリーは持ち歩かない</li>
+    <li>困ったら在ホーチミン日本国総領事館（+84-28-3933-3510）</li>
+  </ul>
+</div>
+
+</main>
+
+<footer>
+  <p>© 2026 ホーチミン女子旅ガイド｜情報は2026年5月時点</p>
+  <p style="margin-top:6px;">価格は変動する場合があります。最新情報は各引用元リンクをご確認ください。</p>
+</footer>
+
+</body>
+</html>
