@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ホーチミン 2泊3日 女子旅ガイド｜安全＆人気スポット厳選15選</title>
 <meta name="description" content="ベトナム・ホーチミン2泊3日の女性向け旅行ガイド。日本人女性に評価が高く治安の良い宿泊先・観光地・グルメスポットを各5つ厳選紹介。">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <style>
   :root {
     --primary: #d63384;
@@ -214,10 +218,90 @@
     font-size: 0.85rem;
     border-top: 1px solid var(--border);
   }
+  /* Map section */
+  .map-wrap {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(214,51,132,0.07);
+    margin-bottom: 24px;
+  }
+  #map { height: 480px; width: 100%; }
+  .map-legend {
+    padding: 14px 18px;
+    background: #fff8fb;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: #444;
+    display: flex; flex-wrap: wrap; gap: 14px;
+  }
+  .map-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .pin {
+    display: inline-block;
+    width: 22px; height: 22px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    border: 2px solid white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  }
+  .leaflet-marker-pin {
+    background: var(--primary);
+    color: white;
+    width: 30px; height: 30px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    border: 3px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 0.95rem;
+  }
+  .leaflet-marker-pin span { transform: rotate(45deg); }
+
+  /* Walking time table */
+  .walk-table-wrap { overflow-x: auto; }
+  table.walk-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card);
+    font-size: 0.88rem;
+    min-width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  table.walk-table th, table.walk-table td {
+    padding: 10px 12px;
+    text-align: center;
+    border: 1px solid var(--border);
+  }
+  table.walk-table thead th {
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    font-size: 0.82rem;
+  }
+  table.walk-table tbody th {
+    background: #fde8f1;
+    color: var(--primary-dark);
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  table.walk-table td.self { background: #f0f0f0; color: #aaa; }
+  table.walk-table td.close { background: #e6f4ec; color: var(--safe-green); font-weight: 600; }
+  table.walk-table td.far { background: #fff3e0; color: #b35900; }
+  .walk-note {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+
   @media (max-width: 600px) {
     header h1 { font-size: 1.5rem; }
     header .subtitle { font-size: 0.92rem; }
     section h2.section-title { font-size: 1.3rem; }
+    #map { height: 380px; }
   }
 </style>
 </head>
@@ -272,10 +356,10 @@
         <span class="rank">2</span>
       </div>
       <div>
-        <span class="area">📍 1区 ベンタイン市場近く</span>
+        <span class="area">📍 1区 西部（Cau Ong Lanh）</span>
         <span class="safety">日本語OK</span>
       </div>
-      <p class="desc">日系ホテル。日本語スタッフ常駐、和朝食あり、館内は清潔そのもので、初めての海外旅行や女性ひとり旅の安心感が抜群。日本人女性レビュー評価が非常に高い。</p>
+      <p class="desc">日系ホテル。日本語スタッフ常駐、和朝食あり、館内は清潔そのもので、初めての海外旅行や女性ひとり旅の安心感が抜群。日本人女性レビュー評価が非常に高い。中心部から少し離れているのでGrab/タクシー利用が便利。</p>
       <p class="price">💰 約 18,000〜30,000円／泊</p>
       <div class="source">
         <span class="source-label">引用元：</span>
@@ -336,6 +420,79 @@
     </div>
 
   </div>
+</section>
+
+<!-- ================== MAP ================== -->
+<section>
+  <h2 class="section-title"><span class="icon">🗺</span>ホテル位置関係マップ＆徒歩所要時間</h2>
+
+  <div class="map-wrap">
+    <div id="map"></div>
+    <div class="map-legend">
+      <span><span class="pin" style="background:#d63384"></span>ホテル位置（番号は当ガイドの順位）</span>
+      <span>📍 1〜4：1区中心部（ラムソン広場周辺）に徒歩圏で集中</span>
+      <span>📍 5：1区西部（Cau Ong Lanh） — 中心部から約3km</span>
+    </div>
+  </div>
+
+  <h3 style="color:var(--primary-dark); margin: 18px 0 10px; font-size:1.05rem;">🚶‍♀️ 各ホテル間 徒歩所要時間マトリクス</h3>
+  <div class="walk-table-wrap">
+    <table class="walk-table">
+      <thead>
+        <tr>
+          <th>　</th>
+          <th>① Park Hyatt</th>
+          <th>② Nikko</th>
+          <th>③ Rex</th>
+          <th>④ Continental</th>
+          <th>⑤ Liberty Central</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>① Park Hyatt</th>
+          <td class="self">―</td>
+          <td class="far">約42分 / 3.3km<br><small>(Grab推奨)</small></td>
+          <td class="close">約2〜3分 / 170m</td>
+          <td class="close">約1〜2分 / 110m</td>
+          <td class="close">約4〜5分 / 310m</td>
+        </tr>
+        <tr>
+          <th>② Nikko</th>
+          <td class="far">約42分 / 3.3km<br><small>(Grab推奨)</small></td>
+          <td class="self">―</td>
+          <td class="far">約40分 / 3.2km<br><small>(Grab推奨)</small></td>
+          <td class="far">約43分 / 3.4km<br><small>(Grab推奨)</small></td>
+          <td class="far">約45分 / 3.5km<br><small>(Grab推奨)</small></td>
+        </tr>
+        <tr>
+          <th>③ Rex</th>
+          <td class="close">約2〜3分 / 170m</td>
+          <td class="far">約40分 / 3.2km</td>
+          <td class="self">―</td>
+          <td class="close">約3分 / 210m</td>
+          <td class="close">約5分 / 360m</td>
+        </tr>
+        <tr>
+          <th>④ Continental</th>
+          <td class="close">約1〜2分 / 110m</td>
+          <td class="far">約43分 / 3.4km</td>
+          <td class="close">約3分 / 210m</td>
+          <td class="self">―</td>
+          <td class="close">約3分 / 190m</td>
+        </tr>
+        <tr>
+          <th>⑤ Liberty Central</th>
+          <td class="close">約4〜5分 / 310m</td>
+          <td class="far">約45分 / 3.5km</td>
+          <td class="close">約5分 / 360m</td>
+          <td class="close">約3分 / 190m</td>
+          <td class="self">―</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="walk-note">※ 徒歩時間は平均速度 5km/h で算出した目安。実際は信号・横断歩道・気候（特に昼間の暑さ）で前後します。3km超は Grab（配車アプリ・約50,000〜80,000 VND）の利用を強く推奨。</p>
 </section>
 
 <!-- ================== SIGHTS ================== -->
@@ -576,5 +733,47 @@
   <p style="margin-top:6px;">価格は変動する場合があります。最新情報は各引用元リンクをご確認ください。</p>
 </footer>
 
+<script>
+  const hotels = [
+    { n: 1, name: "Park Hyatt Saigon",          lat: 10.77688, lng: 106.70297, addr: "2 Lam Son Square, D1" },
+    { n: 2, name: "Hotel Nikko Saigon",         lat: 10.75872, lng: 106.68382, addr: "235 Nguyen Van Cu, D1 (Cau Ong Lanh)" },
+    { n: 3, name: "Rex Hotel Saigon",           lat: 10.77716, lng: 106.70143, addr: "141 Nguyen Hue Blvd, D1" },
+    { n: 4, name: "Hotel Continental Saigon",   lat: 10.77770, lng: 106.70333, addr: "132-134 Dong Khoi, D1" },
+    { n: 5, name: "Liberty Central Saigon Centre", lat: 10.77933, lng: 106.70390, addr: "179 Le Thanh Ton, D1" }
+  ];
+
+  const map = L.map('map').setView([10.77, 106.695], 14);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 19
+  }).addTo(map);
+
+  const bounds = [];
+  hotels.forEach(h => {
+    const icon = L.divIcon({
+      className: '',
+      html: `<div class="leaflet-marker-pin"><span>${h.n}</span></div>`,
+      iconSize: [30, 30],
+      iconAnchor: [15, 30],
+      popupAnchor: [0, -28]
+    });
+    L.marker([h.lat, h.lng], { icon }).addTo(map)
+      .bindPopup(`<strong>${h.n}. ${h.name}</strong><br>${h.addr}`);
+    bounds.push([h.lat, h.lng]);
+  });
+
+  // 中心部4軒を結ぶラインで「クラスター」を視覚化
+  const cluster = hotels.filter(h => h.n !== 2).map(h => [h.lat, h.lng]);
+  L.polygon(cluster, { color: '#d63384', weight: 2, fillColor: '#d63384', fillOpacity: 0.08, dashArray: '6,4' })
+   .bindTooltip('1区中心部クラスター（徒歩圏）', { permanent: false })
+   .addTo(map);
+
+  // Nikkoまでのライン
+  L.polyline([[10.77688, 106.70297], [10.75872, 106.68382]], {
+    color: '#b35900', weight: 2, dashArray: '4,6'
+  }).bindTooltip('約3.3km / Grab推奨', { permanent: false }).addTo(map);
+
+  map.fitBounds(bounds, { padding: [40, 40] });
+</script>
 </body>
 </html>
